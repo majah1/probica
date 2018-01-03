@@ -7,23 +7,19 @@ namespace Operacije
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("uneti prvi i drugi broj");
-            String a = Console.ReadLine();
-            // a = 3,4,5,6
-            // string [] niz = a.spilt(',')
+            Console.WriteLine("uneti prvi i drugi broj razmaknute zarezom");
+            //String a = Console.ReadLine();
+            //a = 3,4,5,6
+            string[] niz = Console.ReadLine().Split(',');
             // proci kroz niz
             // float [] brojevi.  bro
-            String b = Console.ReadLine();
-            String str = a + "," + b;
-            //float first;
-            //float second;
-            float third;
-            bool thirdConv = float.TryParse(str, out third);
-            //bool firstConv = float.TryParse(a,out first);
-            //bool secondConv = float.TryParse(b, out second);
+            //String b = Console.ReadLine();
 
-            //if (!firstConv || !secondConv)
-            if (!thirdConv)
+            float second;
+            bool firstConv = float.TryParse(niz[0], out float first);
+            bool secondConv = float.TryParse(niz[1], out second);
+
+            if (!firstConv || !secondConv)
             {
                 Console.WriteLine("ne moze");
                 Console.ReadLine();
@@ -34,8 +30,7 @@ namespace Operacije
             {
                 Console.WriteLine("izaberi +, -, * ili /");
                 String x = Console.ReadLine();
-                //Oprerations o = new Oprerations(first, second);
-                Oprerations 
+                Oprerations o = new Oprerations(first, second);
                 if (x == "+")
                 {
 

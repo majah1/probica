@@ -8,11 +8,17 @@ namespace Calculator
     {
         float a;
         float b;
+        private float third;
 
         public Oprerations(float first, float second)
         {
             this.A = first;
             this.B = second;
+        }
+
+        public Oprerations(float third)
+        {
+            this.third = third;
         }
 
         public float A { get => a; set => a = value; }
