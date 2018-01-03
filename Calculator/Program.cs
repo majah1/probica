@@ -1,5 +1,6 @@
 ﻿using Calculator;
 using System;
+using System.Collections.Generic;
 
 namespace Operacije
 {
@@ -12,25 +13,35 @@ namespace Operacije
             //a = 3,4,5,6
             string[] niz = Console.ReadLine().Split(',');
             // proci kroz niz
-            // float [] brojevi.  bro
+            List<float> brojevi = new List<float>();
             //String b = Console.ReadLine();
+            // 2,3,,b,9
+            for (int i = 0; i < niz.Length; i++) {
+                float first;
+                bool firstConv = float.TryParse(niz[i], out first);
 
-            float second;
-            bool firstConv = float.TryParse(niz[0], out float first);
-            bool secondConv = float.TryParse(niz[1], out second);
-
-            if (!firstConv || !secondConv)
-            {
-                Console.WriteLine("ne moze");
-                Console.ReadLine();
-                return;
+                if (!firstConv)
+                {
+                    Console.WriteLine("ne moze");
+                    Console.ReadLine();
+                    return;
+                }
+                brojevi.Add(first);
             }
+            
+            //float second;
+            //float first;
+            //bool firstConv = float.TryParse(niz[0], out first);
+            //bool secondConv = float.TryParse(niz[1], out second);
+            //brojevi.Add(first); brojevi.Add(second);
+
+            
 
             while (true)
             {
                 Console.WriteLine("izaberi +, -, * ili /");
                 String x = Console.ReadLine();
-                Oprerations o = new Oprerations(first, second);
+                Oprerations o = new Oprerations(brojevi);
                 if (x == "+")
                 {
 
@@ -42,24 +53,24 @@ namespace Operacije
                 else if (x == "/")
                 {
                     Console.WriteLine("deljenje");
-                    float del = o.deljenje();
+                 //   float del = o.deljenje();
 
-                    Console.WriteLine(del);
+                //    Console.WriteLine(del);
                 }
 
                 else if (x == "*")
                 {
                     Console.WriteLine("mnozenje");
-                    float mno = o.mnozenje();
-                    Console.WriteLine(mno);
+                 //   float mno = o.mnozenje();
+                 //   Console.WriteLine(mno);
 
                 }
 
                 else if (x=="-")
                 {
                     Console.WriteLine("oduzimanje");
-                    float odu = o.oduzimanje();
-                    Console.WriteLine(odu);
+                //    float odu = o.oduzimanje();
+                  //  Console.WriteLine(odu);
                 }
                 else
                 {

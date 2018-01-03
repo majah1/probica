@@ -6,48 +6,50 @@ namespace Calculator
 {
     public class Oprerations
     {
-        float a;
-        float b;
-        private float third;
+        List<float> array;
 
-        public Oprerations(float first, float second)
+        public List<float> Array { get => array; set => array = value; }
+
+        //float b;
+        //private float third;
+
+        public Oprerations(List<float> nizbrojeva)
         {
-            this.A = first;
-            this.B = second;
+            this.Array = nizbrojeva;
+    
         }
 
-        public Oprerations(float third)
-        {
-            this.third = third;
-        }
-
-        public float A { get => a; set => a = value; }
-        public float B { get => b; set => b = value; }
+    
 
         public float sabiranje()
         {
-            return this.A + this.B;
+            float sum = 0;
+            for (int i = 0; i < this.Array.Count; i++)
+            {
+                sum += this.Array[i]; }
+
+            return sum;
         }
 
-        public float deljenje()
-        {
-            return this.A / this.B;
+        //public float deljenje()
+        //{
+        //    return this.A / this.B;
         
-        }
+        //}
 
-        public float mnozenje()
-        {
-            return this.a * this.b;
+        //public float mnozenje()
+        //{
+        //    return this.a * this.b;
 
-        }
+        //}
 
-        public float oduzimanje()
-        {
-            float c;
-                c = this.a - this.b;
-            return c;
+        //public float oduzimanje()
+        //{
+        //    float c;
+        //        c = this.a - this.b;
+        //    return c;
 
-        }
+        //}
 
     }
 
