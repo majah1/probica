@@ -50,7 +50,7 @@ namespace Operacije
             }
             Console.WriteLine(odgovor2);
             //  Console.WriteLine(brojevi2.);
-       
+       //5,6.3,2,1
             //float second;
             //float first;
             //bool firstConv = float.TryParse(niz[0], out first);
@@ -61,7 +61,7 @@ namespace Operacije
 
             while (true)
             {
-                Console.WriteLine("izaberi +, -, * ili /");
+                Console.WriteLine("izaberi +, -, * ili !");
                 String x = Console.ReadLine();
                 Oprerations o = new Oprerations(brojevi);
                 if (x == "+")
@@ -72,12 +72,12 @@ namespace Operacije
                     Console.WriteLine(sum);
                 }
 
-                else if (x == "/")
+                else if (x == "!")
                 {
-                    Console.WriteLine("deljenje");
-                 //   float del = o.deljenje();
+                    Console.WriteLine("Faktorial prvog broja u nizu");
+                   int faktorijel = o.faktorijal(int.Parse(niz[0]));
 
-                //    Console.WriteLine(del);
+                   Console.WriteLine(faktorijel);
                 }
 
                 else if (x == "*")

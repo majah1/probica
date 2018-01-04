@@ -37,6 +37,20 @@ namespace Calculator
 
         //}
 
+            public int faktorijal(int broj)
+        {
+            // broj = 6
+            // 2 * 3 * 4 * 5 * 6
+            int faktorijel = 1;
+            int i = 2;
+            while (i<=broj)
+               
+            {
+                faktorijel *= i;
+                i++;
+            }
+            return faktorijel;
+        }
 
         public float oduzimanje()
         {
