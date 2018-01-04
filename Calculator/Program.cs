@@ -8,7 +8,7 @@ namespace Operacije
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("uneti prvi i drugi broj razmaknute zarezom");
+            Console.WriteLine("uneti mnogo brojeva razmaknutih zarezom");
             //String a = Console.ReadLine();
             //a = 3,4,5,6
             string[] niz = Console.ReadLine().Split(',');
@@ -28,14 +28,36 @@ namespace Operacije
                 }
                 brojevi.Add(first);
             }
-            
+
+          //  List<float> brojevi2 = new List<float>();
+            Console.WriteLine("brojevi u obrnutom redosledu");
+            String odgovor = "" ;
+            for (int i = niz.Length-1; i >=0; i--)
+            {
+                // Console.WriteLine(niz[i]);
+                //  brojevi2.Add(float.Parse(niz[i]));
+                odgovor += niz[i] + ",";
+          
+            }
+            Console.WriteLine(odgovor.TrimEnd(','));
+
+            Console.WriteLine("Brojevi sortirani");
+            String odgovor2 = "";
+            for (int i = 0; i < niz.Length; i++)
+            {
+                Array.Sort(niz, (i1, i2) => i2.CompareTo(i1));
+                odgovor2 += niz[i] + ",";
+            }
+            Console.WriteLine(odgovor2);
+            //  Console.WriteLine(brojevi2.);
+       
             //float second;
             //float first;
             //bool firstConv = float.TryParse(niz[0], out first);
             //bool secondConv = float.TryParse(niz[1], out second);
             //brojevi.Add(first); brojevi.Add(second);
 
-            
+
 
             while (true)
             {
@@ -61,16 +83,16 @@ namespace Operacije
                 else if (x == "*")
                 {
                     Console.WriteLine("mnozenje");
-                 //   float mno = o.mnozenje();
-                 //   Console.WriteLine(mno);
+                  float mno = o.mnozenje();
+                    Console.WriteLine(mno);
 
                 }
 
                 else if (x=="-")
                 {
                     Console.WriteLine("oduzimanje");
-                //    float odu = o.oduzimanje();
-                  //  Console.WriteLine(odu);
+                 float odu = o.oduzimanje();
+                   Console.WriteLine(odu);
                 }
                 else
                 {

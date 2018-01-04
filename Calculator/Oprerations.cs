@@ -34,23 +34,35 @@ namespace Calculator
         //public float deljenje()
         //{
         //    return this.A / this.B;
-        
-        //}
-
-        //public float mnozenje()
-        //{
-        //    return this.a * this.b;
 
         //}
 
-        //public float oduzimanje()
-        //{
-        //    float c;
-        //        c = this.a - this.b;
-        //    return c;
 
-        //}
+        public float oduzimanje()
+        {
+            float odu = this.Array[0];
+            for (int i = 1; i < this.Array.Count; i++)
+            {
+               //if (i==0) {
+               //     //   this.Array[i] = this.Array[i] * -1;
+               //     odu = this.Array[i];
+               // }
+                odu -= this.Array[i];
+            }
 
+            return odu;
+        }
+
+        public float mnozenje()
+        {
+            float mno = 1;
+            for (int i = 0; i < this.Array.Count; i++)
+            {
+                mno *= this.Array[i];
+            }
+
+            return mno;
+        }
     }
 
 }
