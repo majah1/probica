@@ -1,6 +1,7 @@
 ﻿using Calculator;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Operacije
 {
@@ -74,10 +75,15 @@ namespace Operacije
 
                 else if (x == "!")
                 {
-                    Console.WriteLine("Faktorial prvog broja u nizu");
+                    Console.WriteLine("Faktorial najveceg broja u nizu");
                    int faktorijel = o.faktorijal(int.Parse(niz[0]));
 
                    Console.WriteLine(faktorijel);
+
+                    Console.WriteLine("Faktorijal prvog broja u nizu");
+                    float fakniz = o.fakniz(((int)brojevi[0]));
+
+                    Console.WriteLine("Pomnozeno" +fakniz);
                 }
 
                 else if (x == "*")

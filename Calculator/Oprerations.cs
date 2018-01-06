@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Calculator
@@ -19,7 +20,6 @@ namespace Calculator
     
         }
 
-    
 
         public float sabiranje()
         {
@@ -42,14 +42,36 @@ namespace Calculator
             // broj = 6
             // 2 * 3 * 4 * 5 * 6
             int faktorijel = 1;
+          
             int i = 2;
+          
+           
             while (i<=broj)
                
             {
-                faktorijel *= i;
-                i++;
+              faktorijel *= i;
+              i++;
+          
             }
-            return faktorijel;
+            return faktorijel; 
+
+           
+        }
+
+        public float fakniz(int broj)
+        {
+
+            List<float> fakniz = new List<float>();
+            int i;
+           // int fakniz1 = fakniz.Add(broj);
+            for (i = 2; i <= broj; i++)
+            {
+                fakniz.Add(i);
+                Console.WriteLine("mnozilac "+i);
+            }
+            this.Array = fakniz;
+            //float rezultat = this.mnozenje();
+            return this.mnozenje();
         }
 
         public float oduzimanje()
